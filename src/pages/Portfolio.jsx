@@ -14,7 +14,6 @@ const Portfolio = () => {
 
   const allTags = ['Tout', ...new Set(projectsData.map(project => project.tag))];
 
-  // Réinitialiser à la page 1 si filtre, tri ou recherche changent
   useEffect(() => {
     setCurrentPage(1);
   }, [activeFilter, sortKey, searchQuery]);
