@@ -4,6 +4,11 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import LazyImage from '../components/LazyImage';
 
+import contact from "../assets/images-accueil/contact.webp";
+import parcours from "../assets/images-accueil/parcours.webp";
+import projets from "../assets/images-accueil/projets.webp";
+import skills from "../assets/images-accueil/skills.webp";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const menuItems = [
@@ -11,25 +16,25 @@ const menuItems = [
     title: 'Projets',
     subtitle: 'Mes Projets',
     to: '/portfolio',
-    image: "",
+    image: projets,
   },
   {
     title: 'Compétences',
     subtitle: 'Mes Compétences',
     to: '/skills',
-    image: "",
+    image: skills,
   },
   {
     title: 'Parcours',
     subtitle: 'Mon expérience',
     to: '/experience',
-    image: "",
+    image: parcours,
   },
   {
     title: 'Contact',
     subtitle: 'Me contacter',
     to: '/contact',
-    image: "",
+    image: contact,
   }
 ];
 
