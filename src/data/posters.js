@@ -6,6 +6,7 @@ import senna from '../assets/images-posters/mclaren-P1.webp';
 import gtr35 from '../assets/images-posters/Nissan-gtr35.webp';
 import notperfect from '../assets/images-posters/Not-perfect.webp';
 import ferrarif40 from '../assets/images-posters/Ferrari-F40.webp';
+import chiron from '../assets/images-posters/bugatti-chiron.webp';
 
 export const postersData = [
   {
@@ -95,5 +96,16 @@ export const postersData = [
     description: "Création d'une affiche sur la Nissan GT-R R35",
     imagemain: gtr35,
     images:[],
+  },
+  {
+    id: 9,
+    titre: "Bugatti Chiron",
+    marque: "Bugatti",
+    modele: "Chiron",
+    date: "2026-10",
+    logiciel: "Photoshop",
+    description: "Création d'une affiche sur la Bugatti Chiron",
+    imagemain: chiron,
+    images: [],
   }
 ];
