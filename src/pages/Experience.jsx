@@ -38,7 +38,7 @@ const Experience = () => {
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         
         <div className="mb-32">
-          <Link to="/" className="page-back mb-16">
+          <Link to="/" className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors mb-8 text-[13px] uppercase tracking-[0.2em]">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
             </svg>

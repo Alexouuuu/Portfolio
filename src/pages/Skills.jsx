@@ -74,7 +74,6 @@ const Skills = () => {
     <section className="min-h-screen bg-[#111111] pt-32 pb-24 text-white">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
 
-        {/* Bouton retour */}
         <div className="mb-14">
           <Link
             to="/"
@@ -97,7 +96,6 @@ const Skills = () => {
 
         <div className="space-y-12">
           
-          {/* Bloc Présentation / Profil */}
           <div className="bg-white/[0.02] border border-white/10 p-8 md:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
               <div className="lg:col-span-6 space-y-5">
@@ -158,10 +156,8 @@ const Skills = () => {
             </div>
           </div>
 
-          {/* Deux colonnes : Langages & Logiciels */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             
-            {/* Langages de programmation */}
             <div className="bg-white/[0.02] border border-white/10 p-6 md:p-8 flex flex-col h-full">
               <div className="h-14 flex items-center border-b border-white/10 mb-8">
                 <h2 className="text-[13px] font-bold uppercase tracking-[0.2em] text-white/50 leading-tight">
@@ -183,7 +179,6 @@ const Skills = () => {
               </div>
             </div>
 
-            {/* Logiciels & Outils */}
             <div className="bg-white/[0.02] border border-white/10 p-6 md:p-8 flex flex-col h-full">
               <div className="h-14 flex items-center border-b border-white/10 mb-8">
                 <h2 className="text-[13px] font-bold uppercase tracking-[0.2em] text-white/50 leading-tight">
