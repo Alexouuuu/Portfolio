@@ -4,13 +4,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { postersData } from '../data/posters';
 import LazyImage from '../components/LazyImage';
 
+const POSTERS_PER_PAGE = 9;
+
 const PostersPortfolio = () => {
   const [sortConfig, setSortConfig] = useState({ key: 'date', direction: 'desc' });
   const [activeMarque, setActiveMarque] = useState('Toutes');
   const [activeLogiciel, setActiveLogiciel] = useState('Tous');
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
 
-  // Filtres uniques
   const marques = ['Toutes', ...new Set(postersData.map(p => p.marque))];
   const logiciels = ['Tous', ...new Set(postersData.map(p => p.logiciel))];
 
@@ -57,7 +59,18 @@ const PostersPortfolio = () => {
     setSearchQuery('');
     setActiveMarque('Toutes');
     setActiveLogiciel('Tous');
+    setCurrentPage(1);
   };
+
+  const totalPages = Math.ceil(filteredAndSortedPosters.length / POSTERS_PER_PAGE);
+  const paginatedPosters = filteredAndSortedPosters.slice(
+    (currentPage - 1) * POSTERS_PER_PAGE,
+    currentPage * POSTERS_PER_PAGE
+  );
+
+  const handleMarqueChange = (val) => { setActiveMarque(val); setCurrentPage(1); };
+  const handleLogicielChange = (val) => { setActiveLogiciel(val); setCurrentPage(1); };
+  const handleSearchChange = (val) => { setSearchQuery(val); setCurrentPage(1); };
 
   return (
     <section className="min-h-screen bg-[#111111] pt-32 pb-24 text-white">
@@ -77,7 +90,6 @@ const PostersPortfolio = () => {
           Galerie de mes créations de posters et affiches automobiles.
         </p>
 
-        {/* Barre de recherche */}
         <motion.div 
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -93,7 +105,7 @@ const PostersPortfolio = () => {
             <input
               type="text"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => handleSearchChange(e.target.value)}
               placeholder="Trouver un poster (modèle, marque, logiciel...)"
               className="w-full bg-[#181818] border border-white/15 focus:border-white text-white text-[14px] pl-12 pr-10 py-3.5 outline-none transition-all placeholder:text-white/30 font-light"
             />
@@ -111,7 +123,6 @@ const PostersPortfolio = () => {
           </div>
         </motion.div>
 
-        {/* Filtres et tri */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-12 pb-6 border-b border-white/10">
           
           <div className="flex flex-wrap items-center gap-4">
@@ -119,7 +130,7 @@ const PostersPortfolio = () => {
               <span className="text-[11px] uppercase tracking-[0.2em] text-white/30 mr-2">Marque:</span>
               <select 
                 value={activeMarque} 
-                onChange={(e) => setActiveMarque(e.target.value)}
+                onChange={(e) => handleMarqueChange(e.target.value)}
                 className="bg-transparent border border-white/20 text-white text-[13px] px-3 py-1.5 outline-none cursor-pointer"
               >
                 {marques.map(m => <option key={m} value={m} className="bg-black text-white">{m}</option>)}
@@ -130,7 +141,7 @@ const PostersPortfolio = () => {
               <span className="text-[11px] uppercase tracking-[0.2em] text-white/30 mr-2">Logiciel:</span>
               <select 
                 value={activeLogiciel} 
-                onChange={(e) => setActiveLogiciel(e.target.value)}
+                onChange={(e) => handleLogicielChange(e.target.value)}
                 className="bg-transparent border border-white/20 text-white text-[13px] px-3 py-1.5 outline-none cursor-pointer"
               >
                 {logiciels.map(l => <option key={l} value={l} className="bg-black text-white">{l}</option>)}
@@ -168,7 +179,6 @@ const PostersPortfolio = () => {
 
         </div>
 
-        {/* Grille des posters */}
         {filteredAndSortedPosters.length === 0 ? (
           <div className="py-20 flex flex-col items-center justify-center text-center border border-white/10 bg-[#151515] p-8">
             <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center mb-4 text-white/30">
@@ -188,9 +198,10 @@ const PostersPortfolio = () => {
             </button>
           </div>
         ) : (
+          <>
           <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredAndSortedPosters.map((poster) => (
+              {paginatedPosters.map((poster) => (
                 <motion.div
                   layout
                   key={poster.id}
@@ -233,6 +244,41 @@ const PostersPortfolio = () => {
               ))}
             </AnimatePresence>
           </motion.div>
+
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-3 mt-16">
+              <button
+                onClick={() => { setCurrentPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                disabled={currentPage === 1}
+                className="px-4 py-2 border border-white/20 text-[12px] uppercase tracking-widest text-white/60 hover:text-white hover:border-white transition-all disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer"
+              >
+                ← Précédent
+              </button>
+
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                <button
+                  key={page}
+                  onClick={() => { setCurrentPage(page); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                  className={`w-10 h-10 flex items-center justify-center text-[13px] font-mono border transition-all cursor-pointer ${
+                    page === currentPage 
+                      ? 'bg-white text-black border-white' 
+                      : 'border-white/20 text-white/50 hover:text-white hover:border-white'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+
+              <button
+                onClick={() => { setCurrentPage(p => Math.min(totalPages, p + 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                disabled={currentPage === totalPages}
+                className="px-4 py-2 border border-white/20 text-[12px] uppercase tracking-widest text-white/60 hover:text-white hover:border-white transition-all disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer"
+              >
+                Suivant →
+              </button>
+            </div>
+          )}
+          </>
         )}
 
       </div>

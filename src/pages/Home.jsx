@@ -127,7 +127,7 @@ const Home = () => {
           <div className="w-full max-w-[420px] md:w-[500px] lg:w-[650px] flex-shrink-0">
             <div className="aspect-[3/4] w-full relative border border-white/10 overflow-hidden bg-[#050505] shadow-2xl">
               <LazyImage 
-                src="/images/moi.png" 
+                src={`${import.meta.env.BASE_URL}images/moi.png`} 
                 alt="Portrait Chisiu Sebastian" 
                 fallbackTitle="Chisiu Sebastian"
                 className="w-full h-full object-cover transition-all duration-700 hover:scale-[1.02]"
