@@ -71,7 +71,6 @@ const PosterPage = () => {
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           
-          {/* Visualisation du Poster */}
           <div className="w-full lg:w-3/5">
             <div className="relative aspect-[3/4] w-full border border-white/10 overflow-hidden bg-black group shadow-2xl">
               <AnimatePresence mode="wait">
@@ -166,7 +165,6 @@ const PosterPage = () => {
             )}
           </div>
 
-          {/* Spécifications du Poster */}
           <div className="w-full lg:w-2/5 flex flex-col justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -216,7 +214,7 @@ const PosterPage = () => {
                 {poster.description && (
                   <div>
                     <h3 className="text-[10px] uppercase tracking-[0.2em] text-white/30 mb-2">Description</h3>
-                    <p className="text-[15px] leading-relaxed text-white/70 font-light">
+                    <p className="text-[15px] leading-relaxed text-white/70 font-light whitespace-pre-line">
                       {poster.description}
                     </p>
                   </div>

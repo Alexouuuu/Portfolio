@@ -17,6 +17,8 @@ import tailwindIcon from '../assets/images-skills/tailwindcss.webp';
 import bootstrapIcon from '../assets/images-skills/bootstrap.webp';
 import gitIcon from '../assets/images-skills/git.webp';
 import dockerIcon from '../assets/images-skills/docker.webp';
+import javaIcon from '../assets/images-skills/Java.webp';
+import springbootIcon from '../assets/images-skills/Spring_Boot.svg.webp';
 
 import psIcon from '../assets/images-skills/Adobe_Photoshop_CC_icon.svg.webp';
 import aiIcon from '../assets/images-skills/Adobe_Illustrator_CC_icon.svg.webp';
@@ -48,7 +50,9 @@ const Langages = [
   { name: 'Tailwind', icon: tailwindIcon },
   { name: 'Bootstrap', icon: bootstrapIcon },
   { name: 'Git', icon: gitIcon },
-  { name: 'Docker', icon: dockerIcon }
+  { name: 'Docker', icon: dockerIcon },
+  { name: 'Java', icon: javaIcon},
+  { name: 'SpringBoot', icon: springbootIcon}
 ];
 
 const Logiciels = [

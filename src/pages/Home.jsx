@@ -120,7 +120,7 @@ const Home = () => {
               Chisiu<br />Sebastian
             </h1>
             <p className="text-[17px] text-white/50 font-light max-w-[420px] leading-[1.7]">
-              Recherche une alternance pour l'année 2026-2027 en Développement Web.
+              Recherche une alternance ou un stage pour l'année 2026-2027 en Développement Web.
             </p>
           </div>
 
