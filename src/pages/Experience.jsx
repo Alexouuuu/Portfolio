@@ -56,7 +56,7 @@ const Experience = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="mt-8"
+            className="mt-8 flex flex-col items-start gap-4 md:flex-row md:items-center"
           >
             <a 
               href="/cv.pdf" 
@@ -71,7 +71,7 @@ const Experience = () => {
             <a
               href="/calendrier_alternance.pdf"
               download="Calendrier_alternance.pdf"
-              className="inline-flex items-center gap-3 px-6 py-3 border border-white/20 hover:border-white transition-all text-white text-[11px] uppercase tracking-widest bg-white/5 hover:bg-white hover:text-black ml-4"
+              className="inline-flex items-center gap-3 px-6 py-3 border border-white/20 hover:border-white transition-all text-white text-[11px] uppercase tracking-widest bg-white/5 hover:bg-white hover:text-black"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

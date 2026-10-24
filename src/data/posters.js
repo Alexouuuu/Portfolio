@@ -8,6 +8,7 @@ import notperfect from '../assets/images-posters/Not-perfect.webp';
 import ferrarif40 from '../assets/images-posters/Ferrari-F40.webp';
 import chiron from '../assets/images-posters/bugatti-chiron.webp';
 import gt2rs from '../assets/images-posters/porsche-gt2rs.webp';
+import stduo911 from '../assets/images-posters/911stDuo.webp';
 
 export const postersData = [
   {
@@ -118,6 +119,17 @@ export const postersData = [
     logiciel: "Photoshop",
     description: "J'ai mis le fond en noir et blanc pour faire ressortir la partie encadrée en couleur. \n J'ai essayé de mettre en avant l'arrière de la voiture en couleur car c'est ce qu'on remarque en premier en la voyant ainsi qu'une vue du devant.",
     imagemain: gt2rs,
+    images:[],
+  },
+  {
+    id: 11,
+    titre: "Duo 911 Sport Classic & S/T",
+    marque: "Porsche",
+    modele: "911 Sport Classic & 911 S/T",
+    date:"2026-10",
+    logiciel: "Photoshop",
+    description: "Pour ce poster, j'ai placé une photo de deux Porsche sur une route de montagne au centre de la composition. \nEn arrière-plan, les gros plans sur les roues et la carrosserie ont un traitement plus graphique, qui contraste avec la photo principale.\n J'ai ajouté le slogan « There is no substitute » en bas du cadre pour compléter l'affiche.",
+    imagemain: stduo911,
     images:[],
   }
 ];

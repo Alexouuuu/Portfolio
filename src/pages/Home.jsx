@@ -149,7 +149,7 @@ const Home = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
               <p className="text-[12px] uppercase tracking-[0.3em] text-white/40 mb-4">Navigation</p>
-              <h2 className="text-[2.5rem] md:text-[3.5rem] font-light text-white leading-none">Apprenez plus<br className="hidden md:block"/>sur moi</h2>
+              <h2 className="text-[2.5rem] md:text-[3.5rem] font-light text-white leading-none">Apprenez plus<br className="hidden md:block"/> sur moi</h2>
             </div>
             <div className="hidden md:block flex-1 max-w-md ml-auto">
               <p className="text-white/50 text-sm font-light text-right leading-relaxed">

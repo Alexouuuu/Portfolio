@@ -70,7 +70,7 @@ const Navbar = () => {
             className="absolute left-1/2 -translate-x-1/2 z-[110] group"
             title="Accueil"
           >
-            <span className="text-[16px] md:text-[18px] font-bold tracking-[0.4em] uppercase text-white whitespace-nowrap group-hover:opacity-80 transition-opacity">
+            <span className="hidden md:block text-[16px] md:text-[18px] font-bold tracking-[0.4em] uppercase text-white whitespace-nowrap group-hover:opacity-80 transition-opacity">
               Sebastian Chisiu
             </span>
           </Link>
