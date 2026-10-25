@@ -1,7 +1,5 @@
 import GT3RS from '../assets/images-posters/GT3RS.webp';
 import e60 from '../assets/images-posters/M5_E60.webp';
-import spyder918 from '../assets/images-posters/918.webp';
-import aventadorsv from '../assets/images-posters/aventador-SV.webp';
 import senna from '../assets/images-posters/mclaren-P1.webp';
 import gtr35 from '../assets/images-posters/Nissan-gtr35.webp';
 import notperfect from '../assets/images-posters/Not-perfect.webp';
@@ -9,6 +7,8 @@ import ferrarif40 from '../assets/images-posters/Ferrari-F40.webp';
 import chiron from '../assets/images-posters/bugatti-chiron.webp';
 import gt2rs from '../assets/images-posters/porsche-gt2rs.webp';
 import stduo911 from '../assets/images-posters/911stDuo.webp';
+import turbos911 from '../assets/images-posters/911turboS.webp';
+import m3gtrNFS from '../assets/images-posters/m3gtrNFS.webp';
 
 export const postersData = [
   {
@@ -31,28 +31,6 @@ export const postersData = [
     logiciel: "Photoshop",
     description: "J'ai construit ce poster autour du titre M5 dans lequel apparaît une photo de la voiture vue de 3/4.\n Le fond sombre et le gros plan sur la roue donnent une place importante aux détails.",
     imagemain: e60,
-    images: [],
-  },
-  {
-    id: 3,
-    titre: "Porsche 918 Sypder",
-    marque: "Porsche",
-    modele: "918 Spyder",
-    date: "2026-05",
-    logiciel: "Photoshop",
-    description: "J'ai associé plusieurs gros plans de la 918 spyder à une vue de profil.\n Le jaune de la voiture ressort sur le fond sombre, avec un grand titre Porsche et des caractéristiques techniques pour montrer la performance.",
-    imagemain: spyder918,
-    images: [],
-  },
-  {
-    id: 4,
-    titre: "Lamborghini Aventador SV",
-    marque: "Lamborghini",
-    modele: "Aventador SV",
-    date: "2026-10",
-    logiciel: "Photoshop",
-    description: "J'ai réuni plusieurs vues de l'Aventador SV dans une composition Orange et Blanche. \nLes voitures sont placées en diagonale pour donner du mouvement au poster et rappeler les lignes anguleuses du modèle",
-    imagemain: aventadorsv,
     images: [],
   },
   {
@@ -130,6 +108,28 @@ export const postersData = [
     logiciel: "Photoshop",
     description: "Pour ce poster, j'ai placé une photo de deux Porsche sur une route de montagne au centre de la composition. \nEn arrière-plan, les gros plans sur les roues et la carrosserie ont un traitement plus graphique, qui contraste avec la photo principale.\n J'ai ajouté le slogan « There is no substitute » en bas du cadre pour compléter l'affiche.",
     imagemain: stduo911,
+    images:[],
+  },
+  {
+    id: 12,
+    titre: "Porsche 911 Turbo S",
+    marque: "Porsche",
+    modele: "911 turbo S",
+    date:"2026-10",
+    logiciel: "Photoshop",
+    description: "J'ai choisi un fond gris clair pour accompagner la couleur de la Turbo S. Trois bandes présentent l'intérieur, l'arrière et une roue, avec la voiture de profil devant. \nLe grand titre 911 et le reflet au sol complètent la composition.",
+    imagemain: turbos911,
+    images:[],
+  },
+  {
+    id: 13,
+    titre: "M3 GTR Need for Speed",
+    marque: "BMW",
+    modele: "M3 GTR",
+    date:"2026-10",
+    logiciel: "Photoshop",
+    description: "J'ai repris l'univers de Need for Speed Most Wanted avec un fond sombre et texturé. \nTrois bandes montrent différents détails de la BMW, avec la voiture détourée au premier plan. Le logo du jeu et son reflet complètent le poster.",
+    imagemain: m3gtrNFS,
     images:[],
   }
 ];
