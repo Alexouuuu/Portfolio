@@ -272,6 +272,10 @@ const ProjectPage = () => {
           <span className="text-[15px] uppercase tracking-[0.2em] text-white/40 block mb-4 pb-2">Difficultés Rencontrées</span>
             <p className="whitespace-pre-line">{project.difficultés}</p>
         </div>
+        <div className="border-t border-white/10 py-6">
+          <span className="text-[15px] uppercase tracking-[0.2em] text-white/40 block mb-4 pb-2">Ce que j'ai appris</span>
+            <p className="whitespace-pre-line">{project.apprentissage}</p>
+        </div>
       </div>
     </section>
   );

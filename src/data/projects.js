@@ -75,7 +75,7 @@ export const projectsData = [
     lienSite: "https://mloks77.github.io/SAE302-LeCube/",
     objectifs: ["Faire découvrir le speedcubing", "Réaliser un site web immersif", "Optimiser les animations GSAP"],
     contribution: "J'ai assuré le tournage des vidéos et rédigé un article sur les Piliers Rubik's cube pour faire découvrir l'univers du speedcubing.\nEn parallèle de cette création de contenus, j'ai développé une partie du site avec Maxime, notamment la galerie photo. Mon rôle couvrait ainsi plusieurs aspects du projet, de la production audiovisuelle à l'intégration web.",
-    difficultés:"Un problème matériel sur mon ordinateur a ralenti ma progression pendant la phase de développement. Cet imprévu a réduit le temps disponible pour mes tâches et compliqué l'organisation de mon travail sur cette période."
+    difficultés:"Un problème matériel sur mon ordinateur a ralenti ma progression pendant la phase de développement. Cet imprévu a réduit le temps disponible pour mes tâches et compliqué l'organisation de mon travail sur cette période.",
   },
   {
     id: 2,
